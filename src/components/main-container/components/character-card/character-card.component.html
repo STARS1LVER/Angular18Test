@@ -1,0 +1,25 @@
+
+@let characterlocal = character();
+<div>
+
+
+    @if ( character() ) {
+        <h3> {{ characterlocal.name }} </h3>
+
+        <img 
+        [ngSrc]="characterlocal.image" 
+        [alt]="characterlocal.name" 
+        width="200" 
+        height="200">
+
+        <h2> Character: {{ characterlocal.name }} </h2>
+        <p>
+
+           @if ( characterInfo() ) {
+            {{ characterInfo() | json }}
+           }
+        </p>
+
+    }
+
+</div>
